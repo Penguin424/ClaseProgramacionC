@@ -1,5 +1,23 @@
 #include<stdio.h>
 #include<stdbool.h>
+#include<math.h>
+
+void tablas(){
+
+    int tablaBase;
+    int tabla;
+
+    printf("¿Que tabla de multiplicar quieres? ");
+    scanf("%i", &tabla);
+
+    for (int i = 1; i <= 10; i++)
+        {
+            tablaBase = tabla * i;
+
+            printf("%i\tx\t%i  =  %i \n", i, tabla, tablaBase);
+        }
+
+}
 
 int main(int argc, char const *argv[])
 {
@@ -16,18 +34,7 @@ int main(int argc, char const *argv[])
 
         if (seleccion == 1)
         {
-            int tablaBase;
-            int tabla;
-
-            printf("¿Que tabla de multiplicar quieres? ");
-            scanf("%i", &tabla);
-
-            for (int i = 1; i <= 10; i++)
-            {
-                tablaBase = tabla * i;
-
-                printf("%i\tx\t%i  =  %i \n", i, tabla, tablaBase);
-            }
+            tablas();
         }
         else 
         {
